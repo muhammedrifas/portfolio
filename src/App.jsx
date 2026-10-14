@@ -177,16 +177,16 @@ I am Muhammed Rifas—a resourceful engineering leader bringing together 8+ year
 };
 
 const TimelineItem = ({ period, title, company, companyLogo, bulletPoints, isLast }) => (
-  <div className="relative pl-8 md:pl-0">
+  <div className="relative pl-12 md:pl-0">
     {/* Desktop layout line */}
     <div className="hidden md:block absolute left-1/2 -ml-px w-0.5 h-full bg-gray-200 dark:bg-neutral-800 top-0"></div>
     
-    {/* Mobile layout line */}
-    <div className="md:hidden absolute left-[15px] w-0.5 h-full bg-gray-200 dark:bg-neutral-800 top-0 pt-4"></div>
+    {/* Mobile layout line - Shifted right to perfectly split the new padding */}
+    <div className="md:hidden absolute left-[23px] w-0.5 h-full bg-gray-200 dark:bg-neutral-800 top-0 pt-4"></div>
     
     <Reveal className={`md:flex items-center justify-between w-full pb-16 ${isLast ? 'pb-0' : ''}`}>
-      {/* Node / Dot */}
-      <div className="absolute left-0 md:left-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-[#0a0a0a] bg-black dark:bg-white -translate-x-1/2 md:translate-x-[-50%] mt-1.5 md:mt-0 z-10"></div>
+      {/* Node / Dot - Negatively offset to break out of the animated text container and align with the trace */}
+      <div className="absolute -left-6 md:left-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-[#0a0a0a] bg-black dark:bg-white -translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
       
       {/* Left side (Dates & Company for desktop) */}
       <div className="md:w-5/12 mb-4 md:mb-0 md:pr-12 md:text-right flex flex-col md:items-end justify-center">
