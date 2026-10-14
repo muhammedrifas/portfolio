@@ -1,8 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Sun, Moon, LayoutList, BookOpen, Code, Briefcase, Mail, 
-  ExternalLink, Code2, Cpu, Trophy, ArrowRight, Activity 
+  ExternalLink, Code2, Cpu, Trophy, ArrowRight, Activity, Phone 
 } from 'lucide-react';
+import CricketGallery from "./components/CricketGallery";
+
+import profileImage from "./assets/rifas_pic.jpg";
+
+const galleryImages = Array.from(
+  { length: 3 },
+  (_, i) => `/gallery_${i + 1}.jpg`
+);
 
 // Injecting standard CSS for custom animations and scrollbar hiding to maintain the fluidic feel
 const GlobalStyles = () => (
@@ -144,8 +152,7 @@ const Hero = () => {
         
         <Reveal delay={200}>
           <p className="text-lg text-gray-600 dark:text-neutral-400 leading-relaxed max-w-xl">
-            I am a builder and a leader. From developing hit indie Android games to managing high-stakes AI training pipelines at Turing, my career is defined by adapting to industry shifts and mastering new technologies. Currently crafting fluid, modern web experiences.
-          </p>
+I am Muhammed Rifas—a resourceful engineering leader bringing together 8+ years of hands-on coding experience (Python, Java, C, C++, C#) and 3+ years of managing high-stakes AI delivery pipelines. After leading end-to-end LLM data workflows at Turing—contributing to breakthrough models and maintaining an excellent satisfaction record—I am returning to my roots. Today, I am focused on full-stack software engineering, leveraging AI as a productivity multiplier to rapidly build and ship robust applications across platforms.          </p>
         </Reveal>
         
         <Reveal delay={300} className="pt-4">
@@ -158,9 +165,9 @@ const Hero = () => {
       <Reveal delay={200} className="flex-1 w-full max-w-md md:max-w-none">
         <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden bg-gray-100 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 transition-colors">
           <img 
-            src="https://placehold.co/800x1000/eeeeee/111111?text=MR" 
+            src={profileImage} 
             alt="Muhammed Rifas" 
-            className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 border border-black/5 dark:border-white/5 rounded-3xl pointer-events-none"></div>
         </div>
@@ -223,9 +230,9 @@ const ExecutiveSummary = () => {
           company="Independent / Alignerr"
           companyLogo="https://placehold.co/100x100/eeeeee/111111?text=A"
           bulletPoints={[
-            "Mastering the modern web stack (React, JS, Vite, Tailwind) via The Odin Project.",
-            "Building highly responsive, interactive web applications and UI/UX prototypes.",
-            "Providing freelance AI training and data annotation on Alignerr, prioritizing autonomy and flexibility."
+            "Mastering full-stack software architecture (React, Node.js, PostgreSQL) through The Odin Project to build end-to-end applications.",
+            "Leveraging AI as a productivity multiplier to rapidly develop, code, and ship software across web, mobile, and desktop platforms.",
+            "Bridging the transition with flexible freelance work on Alignerr while actively shifting focus from training models to utilizing them for rapid engineering."
           ]}
         />
         <TimelineItem 
@@ -258,7 +265,6 @@ const ExecutiveSummary = () => {
           company="Independent"
           companyLogo="https://placehold.co/100x100/eeeeee/111111?text=Dev"
           bulletPoints={[
-            "Left traditional MNC route within 6 months to pursue independent development.",
             "Built and deployed native Java Android games from scratch.",
             "Created 'Left - Right: Tune Your Brain' achieving 130k+ downloads and a 4.4 rating.",
             "Created 'Memorize - The Brain Game' achieving a 4.8 user rating."
@@ -330,10 +336,10 @@ const NarrativeJourney = () => {
         period="2016 – 2017"
         title="The Indie Sandbox."
         align="left"
-        imageSrc="https://placehold.co/800x600/eeeeee/111111?text=Android+Games"
+        imageSrc="https://papidroid.wordpress.com/wp-content/uploads/2015/05/android-logo-hd-wallpaper-03.jpg"
         text={[
           "Right after college, I was recruited into a traditional MNC. Within six months, I realized the environment stifled my creativity and drive. I made the hard pivot to leave and carve my own path in independent software development.",
-          "Teaching myself Native Java via Android Studio, I built and launched games designed to test reflexes and logic. My first hit, 'Left - Right: Tune Your Brain', garnered over 130,000 organic downloads and a 4.4 rating. I followed up with 'Memorize', which hit a 4.8 rating.",
+          "Using Native Java via Android Studio, I built and launched games designed to test reflexes and logic. My first hit, 'Left - Right: Tune Your Brain', garnered over 130,000 organic downloads and a 4.4 rating. I followed up with 'Memorize: The Brain Game', which hit a 4.8 rating.",
           "While these apps are currently vaulted pending a V2 UI/UX modernization, they served as my foundational crucible for full-cycle product development."
         ]}
       />
@@ -343,7 +349,7 @@ const NarrativeJourney = () => {
         period="2017 – 2022"
         title="Autonomy & Mastery."
         align="right"
-        imageSrc="https://placehold.co/800x600/eeeeee/111111?text=Chegg+Era"
+        imageSrc="https://miro.medium.com/v2/resize:fit:2400/1*w_DjvWrziZbuH_DueSyvZQ.jpeg"
         text={[
           "Seeking a balance between deep technical work and life flexibility, I joined Chegg as a Managed Network Expert. This era was defined by total asynchronous autonomy. I was paid for my expertise, not my hours.",
           "I delivered expert-level solutions and technical code walkthroughs specializing in core algorithms, complex data structures, and multi-language programming (Python, Java, C, C++). Over five years, I maintained a 95% client satisfaction score.",
@@ -356,7 +362,7 @@ const NarrativeJourney = () => {
         period="2022 – 2026"
         title="Riding the AI Wave."
         align="left"
-        imageSrc="https://placehold.co/800x600/eeeeee/111111?text=Turing+AI"
+        imageSrc="https://www.turing.com/img/og_image.webp"
         text={[
           "As the pandemic waned, the launch of LLMs like ChatGPT violently disrupted the EdTech space. Watching the platform I relied on decline, I recognized the macro shift and pivoted directly into the frontier causing the disruption.",
           "I joined Turing exactly as the AI boom accelerated. Starting as an AI Trainer, I authored complex reasoning exemplars for core model training. Driven by rapid execution, I was quickly promoted to Pod Lead, Team Lead, and eventually Delivery Engineering Manager.",
@@ -369,12 +375,12 @@ const NarrativeJourney = () => {
         period="2026 – Present"
         title="The Builder's Rebirth."
         align="right"
-        imageSrc="https://placehold.co/800x600/eeeeee/111111?text=The+Odin+Project"
+        imageSrc="https://www.theodinproject.com/assets/og-logo-2bdf3a30.png"
         text={[
-          "Recognizing that training models is ephemeral and susceptible to automation, I made a strategic decision to upskill and return to building software from the ground up.",
-          "After a brief recharge, I bridged the gap with flexible freelance work on Alignerr, giving me the mental bandwidth to dive deep into The Odin Project. I am currently mastering the modern web stack—React, JavaScript, Vite, and Tailwind.",
-          "This phase is about reclaiming the builder's mindset. Translating complex logic into fluid, highly responsive user interfaces and preparing for the next evolution of my career as a Front-End Engineer."
-        ]}
+  "Recognizing that training models is ephemeral, I made a strategic decision to return to building software from the ground up. Instead of manually annotating data for AI, I am now focused on leveraging AI as a productivity multiplier to accelerate my own coding and development workflows.",
+  "After a brief recharge, I bridged the gap with flexible freelance work on Alignerr. This gave me the mental bandwidth to dive deep into full-stack development through The Odin Project, mastering both modern front-end technologies (React, Vite) and back-end architecture (Node.js, PostgreSQL).",
+  "This phase is about reclaiming the builder's mindset across the board—whether it is web applications, mobile apps, or desktop software. I am focused on translating complex logic into robust products, stepping into the next evolution of my career as a highly productive, AI-empowered Software Engineer."
+]}
       />
 
       {/* Workshop Section */}
@@ -388,13 +394,6 @@ const NarrativeJourney = () => {
         
         <Reveal delay={100} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard 
-            title="Hot-Cold Game" 
-            category="React / Vite / UX" 
-            status="Active" 
-            url="#" 
-            icon={Activity} 
-          />
-          <ProjectCard 
             title="Never Twice" 
             category="React Memory Logic" 
             status="Active" 
@@ -402,24 +401,38 @@ const NarrativeJourney = () => {
             icon={BookOpen} 
           />
           <ProjectCard 
+            title="Hot-Cold Game" 
+            category="React / Vite / UX" 
+            status="WIP" 
+            url="https://github.com/muhammedrifas/hot-cold-game" 
+            icon={Activity} 
+          />
+          <ProjectCard 
             title="Etch-a-Sketch" 
             category="JS / UI Interactions" 
-            status="Active" 
-            url="#" 
+            status="WIP" 
+            url="https://github.com/muhammedrifas/etch_a_sketch_grid" 
             icon={LayoutList} 
           />
           <ProjectCard 
             title="Resumaze" 
             category="React Architecture" 
             status="WIP" 
-            url="#" 
+            url="https://github.com/muhammedrifas/cv-builder" 
+            icon={Code2} 
+          />
+          <ProjectCard 
+            title="Weatherly" 
+            category="React Architecture" 
+            status="WIP" 
+            url="https://github.com/muhammedrifas/weatherly" 
             icon={Code2} 
           />
           <ProjectCard 
             title="Cricket Expense Manager" 
             category="AWS / Legacy App" 
             status="Offline Repo" 
-            url="#" 
+            url="https://github.com/muhammedrifas/cricket-team-management" 
             icon={Trophy} 
           />
         </Reveal>
@@ -443,33 +456,12 @@ const NarrativeJourney = () => {
               </p>
             </Reveal>
             
-            <Reveal delay={200} className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-              <img src="https://placehold.co/400x300/eeeeee/111111?text=Cricket+1" alt="Cricket Match" className="rounded-xl w-full h-32 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
-              <img src="https://placehold.co/400x300/eeeeee/111111?text=Cricket+2" alt="Cricket Match" className="rounded-xl w-full h-32 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
-              <img src="https://placehold.co/400x300/eeeeee/111111?text=Cricket+3" alt="Cricket Match" className="rounded-xl w-full h-32 object-cover grayscale hover:grayscale-0 transition-all duration-500 hidden sm:block" />
+            <Reveal delay={200}>
+                <CricketGallery galleryImages={galleryImages} />
             </Reveal>
           </div>
           
-          <Reveal delay={300} className="bg-black text-white dark:bg-white dark:text-black p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <Cpu size={24} />
-              <h3 className="text-xl font-bold tracking-tight">The Setup</h3>
-            </div>
-            <ul className="space-y-4 font-mono text-sm opacity-80">
-              <li className="flex justify-between border-b border-white/20 dark:border-black/20 pb-2">
-                <span>CPU</span> <span>AMD Ryzen 9 8945</span>
-              </li>
-              <li className="flex justify-between border-b border-white/20 dark:border-black/20 pb-2">
-                <span>RAM</span> <span>16GB</span>
-              </li>
-              <li className="flex justify-between border-b border-white/20 dark:border-black/20 pb-2">
-                <span>GPU</span> <span>RTX 4050</span>
-              </li>
-              <li className="flex justify-between pb-2">
-                <span>OS</span> <span>Arch / Windows</span>
-              </li>
-            </ul>
-          </Reveal>
+          
         </div>
       </div>
       
@@ -478,21 +470,75 @@ const NarrativeJourney = () => {
 };
 
 const Footer = () => (
-  <footer id="contact" className="py-12 border-t border-gray-200 dark:border-neutral-900 text-center">
+  <footer
+    id="contact"
+    className="py-16 px-6 border-t border-gray-200 dark:border-neutral-900 text-center"
+  >
     <Reveal>
-      <div className="flex justify-center gap-6 mb-8">
-        <a href="https://github.com/muhammedrifas" target="_blank" rel="noreferrer" className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform">
-          <Code size={20}/>
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-neutral-500 mb-4">
+        Get in touch
+      </p>
+
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
+        Have something in mind?
+      </h2>
+
+      <p className="max-w-lg mx-auto text-base sm:text-lg leading-relaxed text-gray-600 dark:text-neutral-400 mb-8">
+        Whether it's an interesting project, a collaboration, or simply a
+        conversation about technology, I'd love to hear from you.
+      </p>
+
+      <div className="flex justify-center gap-5 mb-10">
+        <a
+          href="https://github.com/muhammedrifas"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+          className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-all duration-300"
+        >
+          <Code size={20} />
         </a>
-        <a href="#" className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform">
-          <Briefcase size={20}/>
+
+        <a
+          href="https://www.linkedin.com/in/muhammedrifas/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+          className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-all duration-300"
+        >
+          <Briefcase size={20} />
         </a>
-        <a href="mailto:hello@example.com" className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 transition-transform">
+
+        <a
+          href="mailto:muhammedrifas123@gmail.com"
+          aria-label="Email"
+          className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-all duration-300"
+        >
           <Mail size={20} />
         </a>
+
+        <a
+          href="tel:+91 9742242419"
+          aria-label="Call me"
+          className="p-3 bg-gray-100 dark:bg-neutral-900 rounded-full hover:scale-110 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-all duration-300"
+        >
+          <Phone size={20} />
+        </a>
       </div>
-      <p className="text-sm font-medium text-gray-400 dark:text-neutral-600">
-        © {new Date().getFullYear()} Muhammed Rifas. Designed and built with React.
+
+      <p className="text-sm text-gray-500 dark:text-neutral-500 mb-3">
+        Prefer a direct conversation?
+      </p>
+
+      <a
+        href="tel:YOUR_PHONE_NUMBER"
+        className="text-base font-medium text-gray-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
+      >
+        +91 9742242419 / +91 9995957419
+      </a>
+
+      <p className="text-sm font-medium text-gray-400 dark:text-neutral-600 mt-10">
+        © {new Date().getFullYear()} Muhammed Rifas
       </p>
     </Reveal>
   </footer>

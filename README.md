@@ -1,6 +1,6 @@
 # Muhammed Rifas - Personal Portfolio
 
-A highly responsive, fluidic single-page application (SPA) built to showcase my transition from Delivery Engineering Management back to hands-on, full-stack software engineering.
+A highly responsive, fluidic single-page application (SPA) built to showcase my career.
 
 ## Architecture & Features
 * **Dual-View System:** Features a state-driven toggle between a metric-driven "Executive Summary" and a scroll-animated "Narrative Journey".
