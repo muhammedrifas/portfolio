@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Sun, Moon, LayoutList, BookOpen, Code, Briefcase, Mail, 
-  ExternalLink, Code2, Cpu, Trophy, ArrowRight, Activity, Phone 
+  Trophy, ArrowRight, Activity, Phone, Brain, Brush, FileUser, ThermometerSun 
 } from 'lucide-react';
 import CricketGallery from "./components/CricketGallery";
 
@@ -338,10 +338,10 @@ const NarrativeJourney = () => {
         align="left"
         imageSrc="https://papidroid.wordpress.com/wp-content/uploads/2015/05/android-logo-hd-wallpaper-03.jpg"
         text={[
-          "Right after college, I was recruited into a traditional MNC. Within six months, I realized the environment stifled my creativity and drive. I made the hard pivot to leave and carve my own path in independent software development.",
-          "Using Native Java via Android Studio, I built and launched games designed to test reflexes and logic. My first hit, 'Left - Right: Tune Your Brain', garnered over 130,000 organic downloads and a 4.4 rating. I followed up with 'Memorize: The Brain Game', which hit a 4.8 rating.",
-          "While these apps are currently vaulted pending a V2 UI/UX modernization, they served as my foundational crucible for full-cycle product development."
-        ]}
+          "Right after college, I was recruited into a traditional MNC. Within six months, I recognized that my ambitions were better aligned with building products than following a conventional corporate path. I made a deliberate decision to pursue independent software development, taking ownership of my career and turning my ideas into real-world products.",
+          "Using Native Java and Android Studio, I built and launched games designed to challenge reflexes and logic. My first hit, 'Left - Right: Tune Your Brain', garnered over 130,000 organic downloads and a 4.4 rating. I followed it up with 'Memorize: The Brain Game', which achieved a 4.8 rating.",
+          "I've now revived 'Left - Right: Tune Your Brain' with a modernized, more efficient version built entirely with Flutter. This latest release brings a fresh technical foundation to my original hit, demonstrating my continued drive to revisit, improve, and evolve the products I create."
+]}
       />
       
       <PhaseSection 
@@ -394,15 +394,22 @@ const NarrativeJourney = () => {
         
         <Reveal delay={100} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard 
+            title="Left-Right: Tune Your Brain V2" 
+            category="Android Game" 
+            status="Active" 
+            url="https://github.com/muhammedrifas/left-right" 
+            icon={Brain} 
+          />
+          <ProjectCard 
             title="Never Twice" 
-            category="React Memory Logic" 
+            category="Memory & Reflex Challenge" 
             status="Active" 
             url="https://nevertwice.netlify.app/" 
-            icon={BookOpen} 
+            icon={Brain} 
           />
           <ProjectCard 
             title="Hot-Cold Game" 
-            category="React / Vite / UX" 
+            category="Sensory Navigation Puzzle" 
             status="WIP" 
             url="https://github.com/muhammedrifas/hot-cold-game" 
             icon={Activity} 
@@ -412,25 +419,25 @@ const NarrativeJourney = () => {
             category="JS / UI Interactions" 
             status="WIP" 
             url="https://github.com/muhammedrifas/etch_a_sketch_grid" 
-            icon={LayoutList} 
+            icon={Brush} 
           />
           <ProjectCard 
             title="Resumaze" 
-            category="React Architecture" 
+            category="Easy Resume Maker" 
             status="WIP" 
             url="https://github.com/muhammedrifas/cv-builder" 
-            icon={Code2} 
+            icon={FileUser} 
           />
           <ProjectCard 
             title="Weatherly" 
-            category="React Architecture" 
+            category="Weather in Motion" 
             status="WIP" 
             url="https://github.com/muhammedrifas/weatherly" 
-            icon={Code2} 
+            icon={ThermometerSun} 
           />
           <ProjectCard 
             title="Cricket Expense Manager" 
-            category="AWS / Legacy App" 
+            category="Player Expense Tracker" 
             status="Offline Repo" 
             url="https://github.com/muhammedrifas/cricket-team-management" 
             icon={Trophy} 
