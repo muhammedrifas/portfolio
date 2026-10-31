@@ -408,6 +408,13 @@ const NarrativeJourney = () => {
             icon={Brain} 
           />
           <ProjectCard 
+            title="E-kshanam" 
+            category="Interactive Invitation Website Builder" 
+            status="WIP" 
+            url="https://github.com/muhammedrifas/e-kshanam" 
+            icon={Code} 
+          />
+          <ProjectCard 
             title="Hot-Cold Game" 
             category="Sensory Navigation Puzzle" 
             status="WIP" 
