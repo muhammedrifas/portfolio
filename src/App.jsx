@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Sun, Moon, LayoutList, BookOpen, Code, Briefcase, Mail, 
-  Trophy, ArrowRight, Activity, Phone, Brain, Brush, FileUser, ThermometerSun 
+  Trophy, ArrowRight, Activity, Phone, Brain, Brush, FileUser, ThermometerSun, Calculator 
 } from 'lucide-react';
 import CricketGallery from "./components/CricketGallery";
 
@@ -399,6 +399,13 @@ const NarrativeJourney = () => {
             status="Active" 
             url="https://github.com/muhammedrifas/left-right" 
             icon={Brain} 
+          />
+          <ProjectCard 
+            title="Calc+" 
+            category="All-in-One Calculator & Utility Toolkit for Android" 
+            status="Active" 
+            url="https://github.com/muhammedrifas/Calc-plus" 
+            icon={Calculator} 
           />
           <ProjectCard 
             title="Never Twice" 
